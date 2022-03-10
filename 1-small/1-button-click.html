@@ -6,10 +6,25 @@
   <title>Button Click</title>
 </head>
 <body>
-  <!-- HTML goes here -->
+  <button id="btn">Click</button>
+  <button id="btn-1">Click me!</button>
 
   <script>
-    // JavaScript goes here
+    document.getElementById("btn").addEventListener("click", function () {
+      console.log("Button Pressed")
+    });
+
+    document.getElementById("btn-1").addEventListener("mousedown", function (event) {
+      if (event.button == 0) {
+        console.log("You Left Clicked")
+        console.log(event)
+      }
+    })
+
+    window.addEventListener('resize', function (e) {
+      console.log('You Change the size of the Window!')
+      console.log(e)
+    })
 
   </script>
 </body>
